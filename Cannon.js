@@ -5,17 +5,23 @@ class Cannon {
     this.width = width;
     this.height = height;
     this.angle = angle;
-    this.cannonImg = loadImage("canon.png")
-    this.cBaseImg = loadImage("cannonBase.png")
+    this.cannon_image = loadImage("canon.png");
+    this.cannon_base = loadImage("cannonBase.png");
   }
-  display(){
-    push()
-    imageMode(CENTER)
-    image(this.cannonImg,this.x,this.y,this.width,this.height,this.angle)
-    pop()
-    image(this.cBaseImg,70,20,200,200)
-    noFill()
+  display() {
+    if (keyIsDown(RIGHT_ARROW) && this.angle <= 70){
+      this.angle += 1
+    }
+    if (keyIsDown(LEFT_ARROW) && this.angle >= 0){
+      this.angle -= 1
+    }
+    push();
+    translate(this.x, this.y);
+    rotate(this.angle);
+    imageMode(CENTER);
+    image(this.cannon_image, 0, 0, this.width, this.height);
+    pop();
+    image(this.cannon_base, 70, 20, 200, 200);
+    noFill();
   }
 }
-
-
