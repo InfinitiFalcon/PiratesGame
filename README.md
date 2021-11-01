@@ -1,2 +1,2 @@
-# PRO-C23-Reference_code
-Reference code for C23
+# PRO-C25-SA
+boilerplate code for student activituy
