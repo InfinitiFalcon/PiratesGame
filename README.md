@@ -1,2 +1,2 @@
-# PRO-C25-SA
-boilerplate code for student activituy
+# PRO-C25-Reference
+Reference code for C25
